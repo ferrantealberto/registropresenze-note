@@ -1,0 +1,60 @@
+{
+  "name": "school-attendance-system",
+  "version": "1.0.0",
+  "description": "Sistema di Gestione Presenze Scuola",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.2",
+    "firebase": "^10.8.0",
+    "date-fns": "^3.3.1",
+    "lucide-react": "^0.344.0",
+    "react-modal": "^3.16.1",
+    "react-hot-toast": "^2.4.1",
+    "react-to-print": "^2.15.1",
+    "html2pdf.js": "^0.10.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2",
+    "@vitejs/plugin-react": "^4.3.1",
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.35",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-modal": "^3.16.3"
+  },
+  "firebaseConfig": {
+    "apiKey": "YOUR_API_KEY",
+    "authDomain": "YOUR_AUTH_DOMAIN",
+    "projectId": "YOUR_PROJECT_ID",
+    "storageBucket": "YOUR_STORAGE_BUCKET",
+    "messagingSenderId": "YOUR_MESSAGING_SENDER_ID",
+    "appId": "YOUR_APP_ID"
+  },
+  "features": {
+    "auth": {
+      "enabled": true,
+      "providers": ["email"]
+    },
+    "calendar": {
+      "views": ["month", "list"],
+      "actions": ["add", "edit", "delete"],
+      "tracking": {
+        "completion": true,
+        "hours": true
+      }
+    },
+    "reports": {
+      "formats": ["pdf", "print"],
+      "types": ["attendance", "activities", "summary"]
+    }
+  },
+  "schools": ["Pitagora", "Falcone"],
+  "classes": {
+    "Pitagora": ["4ASA", "4FSA", "4C", "4A"],
+    "Falcone": ["4AX", "4BX"]
+  }
+}
